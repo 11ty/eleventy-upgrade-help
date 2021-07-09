@@ -26,7 +26,7 @@ module.exports = function(eleventyConfig) {
 
 #### Swap from `slug` to `slugify` Filter
 
-Useful when you want to swap your existing use of the `slug` filter to the new `slugify` filter and want to compare any URLs that may have changed. [Read more about the `slug` to `slugify` transition](https://www.11ty.dev/docs/filters/slugify/)
+Useful when you want to swap your existing use of the `slug` filter to the new `slugify` filter and want to compare any URLs that may have changed. Read more about [the `slug` to `slugify` transition on the Eleventy docs](https://www.11ty.dev/docs/filters/slugify/).
 
 ### Opt-out
 
