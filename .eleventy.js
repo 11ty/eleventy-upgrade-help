@@ -3,11 +3,13 @@ const chalk = require("chalk");
 const SlugToSlugify = require("./src/slug-to-slugify");
 const DataDeepMerge = require("./src/data-deep-merge");
 const LiquidOptions = require("./src/liquid-options");
+const InputDirGitignore = require("./src/inputdir-gitignore");
 
 module.exports = function(eleventyConfig, options = {
   slugToSlugify: true,
   dataDeepMerge: true,
   liquidOptions: true,
+  inputDirGitignore: true,
 }) {
   try {
     eleventyConfig.versionCheck(pkg["11ty"].compatibility);
@@ -29,5 +31,10 @@ module.exports = function(eleventyConfig, options = {
   // Liquid options were renamed
   if(options.liquidOptions) {
     eleventyConfig.addPlugin(LiquidOptions);
+  }
+
+  // Input dir .gitignore support was removed
+  if(options.inputDirGitignore) {
+    eleventyConfig.addPlugin(InputDirGitignore);
   }
 };
