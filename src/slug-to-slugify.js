@@ -20,13 +20,10 @@ module.exports= (eleventyConfig) => {
     if(!errors.size) {
 
     } else {
-      let sep = "-----------------------------------------------";
-      console.error(sep);
       console.error(chalk.blue(`[${pkg.name}] `) + chalk.yellow("`slug` to `slugify` filter mismatches found.") + " If this site has been published publicly, continue to use the `slug` filter for these templates or your public facing URLs will change!");
       for(let error of errors) {
         console.error(`\n${error}`);
       }
-      console.error(sep);
     }
   });
 
