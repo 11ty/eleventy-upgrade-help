@@ -28,14 +28,25 @@ module.exports = function(eleventyConfig) {
 
 Useful when you want to swap your existing use of the `slug` filter to the new `slugify` filter and want to compare any URLs that may have changed. Read more about [the `slug` to `slugify` transition on the Eleventy docs](https://www.11ty.dev/docs/filters/slugify/).
 
-### Opt-out
+#### Data Deep Merge
+
+Warns if you do not use `eleventyConfig.setDataDeepMerge` in your configuration file that the default value has changed.
+
+#### Liquid Options
+
+* Warns if you use `strict_filters` instead of `strictFilters`.
+* Warns if you don’t have `strict_filters` or `strictFilters` that the new default is `true`.
+
+### Feature Opt-out
 
 ```js
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(UpgradeHelper, {
-    slugToSlugify: false
+    slugToSlugify: false,
+    dataDeepMerge: false,
+    liquidOptions: false,
   });
 };
 ```
