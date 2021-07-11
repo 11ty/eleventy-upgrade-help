@@ -58,6 +58,7 @@ module.exports = function(eleventyConfig) {
     slugToSlugify: false,
     dataDeepMerge: false,
     liquidOptions: false,
+    inputDirGitignore: false,
   });
 };
 ```
