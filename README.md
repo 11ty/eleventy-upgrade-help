@@ -41,7 +41,12 @@ module.exports = function(eleventyConfig) {
 
 #### Non-root Input directory `.gitignore`
 
-[_Issue 364_](https://github.com/11ty/eleventy/issues/364). If your input directory is not `.` and you have a `.gitignore` file inside (e.g. `src/.gitignore`), this file is no longer supported. Root project-level `.gitignore` files and input directory `.eleventyignore` files are still supported.
+[_Issue 364_](https://github.com/11ty/eleventy/issues/364). If your input directory is not `.` and you have a `.gitignore` file inside (e.g. `src/.gitignore`), this file is no longer supported.
+
+* ✅ `{ROOT}/.gitignore`
+* 🚫 `{INPUT_DIR}/.gitignore` (removed in 1.0)
+* ✅ `{ROOT}/.eleventyignore`
+* ✅ `{INPUT_DIR}/.eleventyignore`
 
 ### Feature Opt-out
 
