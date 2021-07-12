@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
     }
 
     if(!("dynamicPartials" in eleventyConfig.liquidOptions)) {
-      console.warn(chalk.blue("[11ty/eleventy-upgrade-help] ") + "The liquidjs `dynamicPartials` option default changed from false to true. Revert with `eleventyConfig.setLiquidOptions({ dynamicPartials: false })`.");
+      console.warn(chalk.blue("[11ty/eleventy-upgrade-help] ") + "The liquidjs `dynamicPartials` option default changed from false to true. Functionally this means `include` statements require quotes now. Revert with `eleventyConfig.setLiquidOptions({ dynamicPartials: false })`.");
     }
   })
 };
