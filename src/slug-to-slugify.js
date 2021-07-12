@@ -10,19 +10,19 @@ module.exports= (eleventyConfig) => {
   const slugFn = eleventyConfig.getFilter("slug");
   const slugifyFn = eleventyConfig.getFilter("slugify");
 
-  let errors = new Set();
+  let warnings = new Set();
 
   eleventyConfig.on("eleventy.before", function() {
-    errors = new Set();
+    warnings = new Set();
   });
 
   eleventyConfig.on("eleventy.after", function() {
-    if(!errors.size) {
-
+    if(!warnings.size) {
+      console.warn(chalk.blue(`[${pkg.name}]`), chalk.green("PASSED"), "`slug` to `slugify` filter");
     } else {
-      console.error(chalk.blue(`[${pkg.name}] `) + chalk.yellow("`slug` to `slugify` filter mismatches found.") + " If this site has been published publicly, continue to use the `slug` filter for these templates or your public facing URLs will change!");
-      for(let error of errors) {
-        console.error(`\n${error}`);
+      console.warn(chalk.blue(`[${pkg.name}]`), chalk.blue("NOTICE"), "`slug` to `slugify` filter mismatches found.", "No action is strictly required here, but if this site has been published publicly make sure that you continue to use the `slug` filter for these templates or your public facing URLs will change/break!");
+      for(let warn of warnings) {
+        console.warn(`\n${warn}`);
       }
     }
   });
@@ -30,11 +30,10 @@ module.exports= (eleventyConfig) => {
   // replace the default `slug` filter
   eleventyConfig.addFilter("slug", function (str="") {
     const slugValue = slugFn(str);
-
     try {
       assert.strictEqual(slugValue, slugifyFn(str));
     } catch(e) {
-      errors.add(`${inspect(str)}\n${e.message}`);
+      warnings.add(`${inspect(str)}\n${e.message}`);
     } finally {
       return slugValue;
     }
