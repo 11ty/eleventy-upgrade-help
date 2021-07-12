@@ -1,10 +1,8 @@
 # eleventy-upgrade-help
 
-A plugin to help you upgrade your Eleventy project to a new version.
+A plugin to help you upgrade your Eleventy project to a new major version.
 
 ## Usage
-
-**WARNING THIS PLUGIN IS IN PRERELEASE STATUS AND HAS NOT YET BEEN PUBLISHED TO NPM**
 
 Install from npm:
 
@@ -38,6 +36,7 @@ module.exports = function(eleventyConfig) {
 
 * Warns if you use `strict_filters` instead of `strictFilters`.
 * Warns if you don’t have `strict_filters` or `strictFilters` that the new default is `true`.
+* Warns if you don’t have `dynamicPartials`, the new default is `true`.
 
 #### Non-root Input directory `.gitignore`
 
