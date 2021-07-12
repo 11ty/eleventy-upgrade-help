@@ -1,6 +1,6 @@
 # eleventy-upgrade-help
 
-A plugin to help you upgrade your Eleventy project to a new major version.
+A plugin to help you upgrade your Eleventy project to a new major version. The major version of this plugin will always match the major version of Eleventy that you’re upgrading to.
 
 ## Usage
 
