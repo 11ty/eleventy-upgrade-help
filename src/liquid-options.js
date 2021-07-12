@@ -6,7 +6,11 @@ module.exports = function(eleventyConfig) {
       console.warn(chalk.blue("[11ty/eleventy-upgrade-help] ") + "The liquidjs package renamed the `strict_filters` option to `strictFilters`. Please rename in `eleventyConfig.setLiquidOptions` accordingly.");
     } else if(!("strictFilters" in eleventyConfig.liquidOptions)) {
       // no strict_filters or strictFilters
-      console.warn(chalk.blue("[11ty/eleventy-upgrade-help] ") + "The liquidjs `strictFilters` option default changed from false to true. Revert with `eleventyConfig.setLiquidOptions({ strictFilters: false })`.");
+      console.warn(chalk.blue("[11ty/eleventy-upgrade-help] ") + "The liquidjs `strictFilters` option default (in Eleventy) changed from false to true. Revert with `eleventyConfig.setLiquidOptions({ strictFilters: false })`.");
+    }
+
+    if(!("dynamicPartials" in eleventyConfig.liquidOptions)) {
+      console.warn(chalk.blue("[11ty/eleventy-upgrade-help] ") + "The liquidjs `dynamicPartials` option default changed from false to true. Revert with `eleventyConfig.setLiquidOptions({ dynamicPartials: false })`.");
     }
   })
 };
