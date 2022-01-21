@@ -20,6 +20,8 @@ module.exports = function(eleventyConfig) {
 };
 ```
 
+After your upgrade is complete and you’ll removed all of the violations/warnings from your output, delete the plugin from your `package.json` and `.eleventy.js` configuration file.
+
 ### Features
 
 #### Swap from `slug` to `slugify` Filter
