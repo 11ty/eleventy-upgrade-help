@@ -1,6 +1,6 @@
 {
   "name": "@11ty/eleventy-upgrade-help",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Helper plugin when upgrading your Eleventy project to a new major version.",
   "publishConfig": {
     "access": "public"
@@ -34,6 +34,6 @@
     "semver": "^7.3.5"
   },
   "11ty": {
-    "compatibility": ">= 1.0.0 < 2.0.0 || >= 1.0.0-canary < 2.0.0 || >= 1.0.0-beta < 2.0.0"
+    "compatibility": ">= 2.0.0 < 3.0.0 || >= 2.0.0-canary < 3.0.0 || >= 2.0.0-beta < 3.0.0"
   }
 }
