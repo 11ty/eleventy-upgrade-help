@@ -23,6 +23,10 @@ module.exports = function(eleventyConfig) {
 
 After your upgrade is complete and you’ll removed all of the violations/warnings from your output, delete the plugin from your `package.json` and `.eleventy.js` configuration file.
 
+## Example demo
+
+You can review a [sample project using this upgrade plugin](https://github.com/11ty/demo-eleventy-upgrade-help).
+
 <!--
 Steps:
 

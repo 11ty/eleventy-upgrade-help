@@ -11,7 +11,7 @@ module.exports = function(eleventyConfig) {
 		for(let page of results) {
 			if(page.data && ("renderData" in page.data) && Object.keys(page.data.renderData || {}).length > 0) {
 				count++;
-				console.log(chalk.yellow(`[${pkg.name}]`), `${chalk.yellow("WARNING")} This project is using the removed renderData feature on: "${page.inputPath}"`);
+				console.log(chalk.yellow(`[${pkg.name}]`), `${chalk.yellow("WARNING")} This project is using the removed renderData feature on: ${chalk.yellow(page.inputPath)}`);
 			}
 		}
 		if(count === 0) {

@@ -15,7 +15,7 @@ module.exports = function(eleventyConfig) {
 	});
 	let hasNestedNodeModules = nestedNodeModules.length > 0;
 	if(hasNestedNodeModules) {
-		console.log(chalk.yellow(`[${pkg.name}]`), `${chalk.yellow("WARNING")} ${str} This new default affects your project, as you do have at least one node_modules folder not in the project root (which will be ignored in 2.0+): "${nestedNodeModules}"`);
+		console.log(chalk.yellow(`[${pkg.name}]`), `${chalk.yellow("WARNING")} ${str} This new default affects your project, as you do have at least one node_modules folder not in the project root (which will be ignored by default in 2.0+): ${chalk.yellow(nestedNodeModules)}`);
 	} else {
 		console.log(chalk.green(`[${pkg.name}]`), `${chalk.green("PASSED")} ${str} This does not appear to affect your project, as you have no nested node_modules folders!`);
 	}

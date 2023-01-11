@@ -2,7 +2,7 @@ const chalk = require("chalk");
 const pkg = require("../package.json");
 
 module.exports = function(eleventyConfig) {
-	let description = `When calculating \`page.fileSlug\` dates are now stripped from parent folder names of index.* files.`;
+	let before = `When calculating \`page.fileSlug\` dates are now stripped from parent folder names of index.* files.`;
 	let readMore = "Read more: https://github.com/11ty/eleventy/pull/2111";
 
 	eleventyConfig.dataFilterSelectors.add("page");
@@ -23,9 +23,9 @@ module.exports = function(eleventyConfig) {
 			}
 		}
 		if(affectedInputPaths.length > 0) {
-			console.log(chalk.yellow(`[${pkg.name}]`), chalk.yellow("WARNING"), `${description} The following paths are affected: ${chalk.yellow(affectedInputPaths.join(", "))}. You will need to review usage of \`page.fileSlug\` in your project, see https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable. ${readMore}`);
+			console.log(chalk.yellow(`[${pkg.name}]`), chalk.yellow("WARNING"), `${before} The following paths are affected: ${chalk.yellow(affectedInputPaths.join(", "))}. You will need to review usage of \`page.fileSlug\` in your project, see https://www.11ty.dev/docs/data-eleventy-supplied/#page-variable. ${readMore}`);
 		} else {
-			console.log(chalk.green(`[${pkg.name}]`), chalk.green("PASSED"), `${description} This project has no file/directory paths that are affected, no worries here. ${readMore}`);
+			console.log(chalk.green(`[${pkg.name}]`), chalk.green("PASSED"), `${before} This project has no file/directory paths that are affected, no worries here. ${readMore}`);
 		}
 	});
 };

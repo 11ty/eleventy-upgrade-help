@@ -13,7 +13,7 @@ function getFilePathWithoutExtensions(file, extensions = []) {
 }
 
 module.exports = function(eleventyConfig) {
-	let description = `Global data files with one or more dots in the file name are stored differently in the data cascade in Eleventy 2.0. For example, \`a.b.json\` stores as \`'a.b': value\` instead of \`a: { b: value }\`.`;
+	let before = `Global data files with one or more dots in the file name are stored differently in the data cascade in Eleventy 2.0. For example, \`a.b.json\` stores as \`'a.b': value\` instead of \`a: { b: value }\`.`;
 	let readMore = "Read more: https://github.com/11ty/eleventy/pull/1912";
 
 	eleventyConfig.on("eleventy.before", ({dir}) => {
@@ -35,9 +35,9 @@ module.exports = function(eleventyConfig) {
 		}
 
 		if(errorDataFilePaths.length > 0) {
-			console.log(chalk.yellow(`[${pkg.name}]`), chalk.yellow("WARNING"), `${description} This project has affected data files: ${chalk.yellow(errorDataFilePaths.join(", "))} ${readMore}`);
+			console.log(chalk.yellow(`[${pkg.name}]`), chalk.yellow("WARNING"), `${before} This project has affected data files: ${chalk.yellow(errorDataFilePaths.join(", "))} ${readMore}`);
 		} else {
-			console.log(chalk.green(`[${pkg.name}]`), chalk.green("PASSED"), `${description} This project has no affected data file paths. ${readMore}`);
+			console.log(chalk.green(`[${pkg.name}]`), chalk.green("PASSED"), `${before} This project has no affected data file paths. ${readMore}`);
 
 		}
 	});
