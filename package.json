@@ -1,6 +1,6 @@
 {
   "name": "@11ty/eleventy-upgrade-help",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Helper plugin when upgrading your Eleventy project to a new major version.",
   "publishConfig": {
     "access": "public"
