@@ -16,7 +16,6 @@ module.exports = function(eleventyConfig) {
   console.log(chalk.blue(`[${pkg.name}] ---`));
 
   // Full list of issues: https://github.com/11ty/eleventy/issues?q=milestone%3A%22Eleventy+2.0.0%22+is%3Aclosed+label%3Abreaking-change
-  eleventyConfig.addPlugin(require("./src/emulated-passthrough-behavior"));
   eleventyConfig.addPlugin(require("./src/global-data-preprocessing"));
   eleventyConfig.addPlugin(require("./src/passthrough-all"));
   eleventyConfig.addPlugin(require("./src/liquidjs"));
