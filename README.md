@@ -9,7 +9,7 @@ The major version of this plugin will always match the major version of Eleventy
 Install from npm:
 
 ```bash
-npm install @11ty/eleventy-upgrade-help
+npm install @11ty/eleventy-upgrade-help@2
 ```
 
 Add to your configuration file (probably `.eleventy.js`):
