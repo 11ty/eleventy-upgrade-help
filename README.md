@@ -1,6 +1,10 @@
-# eleventy-upgrade-help v2
+# eleventy-upgrade-help v2.0
 
-A plugin to help you upgrade your Eleventy project from Eleventy v1.x to v2.x.
+A plugin to help you upgrade your Eleventy project from Eleventy v1.0 to v2.0.
+
+Previous versions:
+
+* [Upgrade from 0.12 to 1.0](https://github.com/11ty/eleventy-upgrade-help/tree/v1.x)
 
 The major version of this plugin will always match the major version of Eleventy that you’re upgrading to.
 
