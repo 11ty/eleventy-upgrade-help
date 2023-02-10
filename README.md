@@ -1,4 +1,4 @@
-# eleventy-upgrade-help
+# eleventy-upgrade-help v1.0
 
 A plugin to help you upgrade your Eleventy project to a new major version. The major version of this plugin will always match the major version of Eleventy that you’re upgrading to.
 
@@ -7,7 +7,7 @@ A plugin to help you upgrade your Eleventy project to a new major version. The m
 Install from npm:
 
 ```bash
-npm install @11ty/eleventy-upgrade-help
+npm install @11ty/eleventy-upgrade-help@1
 ```
 
 Add to your configuration file (probably `.eleventy.js`):
