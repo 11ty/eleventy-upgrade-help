@@ -10,19 +10,19 @@ The major version of this plugin will always match the major version of Eleventy
 
 ## Usage
 
-* Upgrade Eleventy with `npm` _before_ using this plugin by running the following command:
+Upgrade Eleventy with `npm` _before_ using this plugin by running the following command:
 
 ```bash
 npm install @11ty/eleventy@2
 ```
 
-* Then, install this plugin:
+Then, install this plugin:
 
 ```bash
 npm install @11ty/eleventy-upgrade-help@2
 ```
 
-* Add to your configuration file (probably `.eleventy.js` or `eleventy.config.js`):
+Add to your configuration file (probably `.eleventy.js` or `eleventy.config.js`):
 
 ```js
 const UpgradeHelper = require("@11ty/eleventy-upgrade-help");
@@ -33,9 +33,8 @@ module.exports = function(eleventyConfig) {
 };
 ```
 
-* Run your usual build command (e.g. `npm run build`) and pay attention to the output.
-Address any violations and warnings. 
-* Once you’ve removed all of the violations/warnings from your output, run `npm uninstall @11ty/eleventy-upgrade-help` to remove the plugin and delete its code from your Eleventy configuration file.
+Run your usual build command (e.g. `npm run build`) and pay attention to the output.
+Address any violations and warnings. Once you’ve removed all of the violations/warnings from your output, run `npm uninstall @11ty/eleventy-upgrade-help` to remove the plugin and delete its code from your Eleventy configuration file.
 
 ## Example demo
 
