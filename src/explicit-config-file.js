@@ -9,12 +9,15 @@ const argv = minimist(process.argv.slice(2), {
 });
 
 module.exports = function(eleventyConfig) {
-	let type = chalk.blue("NOTICE");
-
-	if(argv.config && !fs.existsSync(argv.config)) {
-		// We’ll never get here because the configuration file has to work to run the upgrade plugin.
-		type = chalk.red("ERROR");
+	if(argv.config) {
+		if(!fs.existsSync(argv.config)) {
+			// We’ll never get here because the configuration file has to work to run the upgrade plugin.
+			console.log(chalk.red(`[${pkg.name}] ERROR`), `Eleventy will fail with an error when you point \`--config\` to a configuration file that does not exist. Previous versions ran as-is (without application configuration). Read more: https://github.com/11ty/eleventy/issues/3373`);
+		} else {
+			console.log(chalk.green(`[${pkg.name}] PASSED`), `Eleventy will fail with an error when you point \`--config\` to a configuration file that does not exist. You are using \`--config\` but your configuration file _does_ exist—great! Read more: https://github.com/11ty/eleventy/issues/3373`);
+		}
+	} else {
+		console.log(chalk.green(`[${pkg.name}] PASSED`), `Eleventy will fail with an error when you point \`--config\` to a configuration file that does not exist. You are not using \`--config\`—so don’t worry about it! Read more: https://github.com/11ty/eleventy/issues/3373`);
 	}
 
-	console.log(chalk.blue(`[${pkg.name}]`), type, `Eleventy will fail with an error when you point \`--config\` to a configuration file that does not exist. Previous versions ran as-is (without application configuration). Read more: https://github.com/11ty/eleventy/issues/3373`);
 };

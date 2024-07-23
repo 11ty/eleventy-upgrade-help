@@ -3,9 +3,9 @@ const pkg = require("../package.json");
 
 // https://v2-0-1.11ty.dev/docs/languages/html/#using-the-same-input-and-output-directories
 module.exports = function(eleventyConfig) {
-	eleventyConfig.on("eleventy.config", ({ config }) => {
-		if(!("htmlOutputSuffix" in config)) {
-			console.log(chalk.blue(`[${pkg.name}]`), chalk.blue(`NOTICE`), `The \`htmlOutputSuffix\` feature was removed. It doesn’t look like you were using it!`);
+	eleventyConfig.on("eleventy.config", (templateConfig) => {
+		if(!("htmlOutputSuffix" in templateConfig.config)) {
+			console.log(chalk.green(`[${pkg.name}] PASSED`), `The \`htmlOutputSuffix\` feature was removed. It doesn’t look like you were using it! Learn more: https://github.com/11ty/eleventy/issues/3327`);
 		} else {
 			console.log(chalk.red(`[${pkg.name}]`), chalk.red(`ERROR`), `The \`htmlOutputSuffix\` feature was removed. Learn more: https://github.com/11ty/eleventy/issues/3327`);
 		}
