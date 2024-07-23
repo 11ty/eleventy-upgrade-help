@@ -1,6 +1,6 @@
 {
   "name": "@11ty/eleventy-upgrade-help",
-  "version": "2.0.5",
+  "version": "3.0.0",
   "description": "Helper plugin when upgrading your Eleventy project to a new major version.",
   "publishConfig": {
     "access": "public"
@@ -8,7 +8,7 @@
   "main": ".eleventy.js",
   "license": "MIT",
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   },
   "funding": {
     "type": "opencollective",
@@ -30,10 +30,10 @@
   "bugs": "https://github.com/11ty/eleventy-upgrade-help/issues",
   "homepage": "https://www.11ty.dev/",
   "dependencies": {
-    "chalk": "^4.1.1",
-    "semver": "^7.3.5"
+    "kleur": "^4.1.5",
+    "semver": "^7.6.3"
   },
   "11ty": {
-    "compatibility": ">=2 <3"
+    "compatibility": ">=3 <4"
   }
 }

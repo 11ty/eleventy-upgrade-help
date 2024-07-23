@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+const chalk = require("kleur");
 const fastglob = require("fast-glob");
 const path = require("path");
 const pkg = require("../package.json");

@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+const chalk = require("kleur");
 const pkg = require("../package.json");
 
 module.exports = function(eleventyConfig) {
