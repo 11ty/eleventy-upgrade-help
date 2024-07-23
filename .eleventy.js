@@ -15,7 +15,8 @@ module.exports = function(eleventyConfig) {
   console.log(chalk.blue(`[${pkg.name}] ---`));
 
   // Full list of issues: https://github.com/11ty/eleventy/issues?q=milestone%3A%22Eleventy+3.0.0%22+is%3Aclosed+label%3Abreaking-change
-  eleventyConfig.addPlugin(require("./src/node-version"));
+  eleventyConfig.addPlugin(require("./src/node-version.js"));
+  eleventyConfig.addPlugin(require("./src/explicit-config-file.js"));
 
   eleventyConfig.on("eleventy.after", () => {
     console.log(chalk.blue(`[${pkg.name}] This plugin is intended for temporary use: once you’re satisfied please remove this plugin from your project!`));
