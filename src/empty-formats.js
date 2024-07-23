@@ -1,4 +1,3 @@
-const fs = require("node:fs");
 const chalk = require("kleur");
 const pkg = require("../package.json");
 
@@ -12,6 +11,6 @@ module.exports = function(eleventyConfig) {
 	if(argv.formats || argv.formats === undefined) {
 		console.log(chalk.green(`[${pkg.name}] PASSED`), `You aren’t using \`--formats=\` or  \`--formats=''\` but if you were you should know that these are now empty template format sets. In previous versions, they were aliased to "*". Read more: https://github.com/11ty/eleventy/issues/3255`);
 	} else if(argv.formats === "" || argv.formats === null) {
-		console.log(chalk.red(`[${pkg.name}] ERROR`), `In Eleventy 3.0 \`--formats=""\` and \`formats=\` are empty template format sets. Previous versions aliased these to "*". Use \`--formats=*\` if you want that behavior in 3.0. Read more: https://github.com/11ty/eleventy/issues/3255`);
+		console.log(chalk.red(`[${pkg.name}] ERROR`), `In Eleventy 3.0 \`--formats=""\` and \`formats=\` are empty template format sets. Previous versions aliased these to "*". Use \`--formats=*\` if you want to keep using that behavior in 3.0. Read more: https://github.com/11ty/eleventy/issues/3255`);
 	}
 };
