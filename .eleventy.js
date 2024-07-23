@@ -19,6 +19,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(require("./src/explicit-config-file.js"));
   eleventyConfig.addPlugin(require("./src/html-output-suffix.js"));
   eleventyConfig.addPlugin(require("./src/alias-template-formats.js"));
+  eleventyConfig.addPlugin(require("./src/empty-formats.js"));
 
   eleventyConfig.on("eleventy.after", () => {
     console.log(chalk.blue(`[${pkg.name}] This plugin is intended for temporary use: once you’re satisfied please remove this plugin from your project!`));
