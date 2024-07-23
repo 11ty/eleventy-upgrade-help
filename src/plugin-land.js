@@ -13,6 +13,7 @@ module.exports = function(eleventyConfig) {
 	// any of these files in your project
 
 	let allRemovedKeys = "pug,ejs,haml,mustache,handlebars".split(",");
+	let notFound = [];
 
 	for(let removedKey of allRemovedKeys) {
 		let foundFiles = fastglob.sync(`${eleventyConfig.directories.input}**/*.${removedKey}`);
@@ -22,6 +23,12 @@ module.exports = function(eleventyConfig) {
 			} else {
 				console.log(chalk.green(`[${pkg.name}] PASSED`), `You have installed the ${removedKey} plugin to handle the ${foundFiles.length} ${removedKey} file${foundFiles.length !== 1 ? "s" : ""} in your project. Learn more: https://github.com/11ty/eleventy/issues/3124`);
 			}
+		} else {
+			notFound.push(removedKey);
 		}
+	}
+
+	if(notFound.length > 0) {
+		console.log(chalk.green(`[${pkg.name}] PASSED`), `No {${notFound.join(",")}} templates were found in this project. If you were, you would have needed to install plugins for these: https://github.com/11ty/eleventy-plugin-template-languages. Learn more: https://github.com/11ty/eleventy/issues/3124`);
 	}
 };
