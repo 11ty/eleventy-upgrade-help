@@ -21,6 +21,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(require("./src/alias-template-formats.js"));
   eleventyConfig.addPlugin(require("./src/empty-formats.js"));
   eleventyConfig.addPlugin(require("./src/plugin-land.js"));
+  eleventyConfig.addPlugin(require("./src/compile-options-permalink.js"));
 
   eleventyConfig.on("eleventy.after", () => {
     console.log(chalk.blue(`[${pkg.name}] This plugin is intended for temporary use: once you’re satisfied please remove this plugin from your project!`));

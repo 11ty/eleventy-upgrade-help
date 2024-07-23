@@ -1,5 +1,4 @@
 const chalk = require("kleur");
-const path = require("node:path");
 const fastglob = require("fast-glob");
 const pkg = require("../package.json");
 
