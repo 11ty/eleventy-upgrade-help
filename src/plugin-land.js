@@ -7,9 +7,6 @@ module.exports = function(eleventyConfig) {
 		installedPlugins[key] = true;
 	}
 
-	// template formats: * or explicit pug,ejs,haml,mustache,handlebars
-	// any of these files in your project
-
 	let allRemovedKeys = "pug,ejs,haml,mustache,handlebars".split(",");
 	let notFound = [];
 

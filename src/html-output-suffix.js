@@ -12,6 +12,6 @@ module.exports = function(eleventyConfig) {
 
 	// Input and output are the same
 	if(eleventyConfig.directories.input === eleventyConfig.directories.output) {
-		console.log(chalk.yellow(`[11ty/eleventy-upgrade-help] WARNING`), `Your input and output folders are identical so please take note that Eleventy 3.0 will throw an error if any of your output files attempt to overwrite your input files. Learn more: https://github.com/11ty/eleventy/issues/3327`);
+		console.log(chalk.blue(`[11ty/eleventy-upgrade-help] NOTICE`), `Your input and output folders are identical so please take note that Eleventy will now throw an error if any of your output files attempt to overwrite your input files. Learn more: https://github.com/11ty/eleventy/issues/3327`);
 	}
 };
