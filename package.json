@@ -6,6 +6,9 @@
     "access": "public"
   },
   "main": ".eleventy.js",
+  "scripts": {
+    "test": ""
+  },
   "license": "MIT",
   "engines": {
     "node": ">=18"
