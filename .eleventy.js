@@ -14,6 +14,8 @@ module.exports = function(eleventyConfig) {
   console.log(chalk.blue(`[11ty/eleventy-upgrade-help]`), `If you are migrating from 0.x or 1.x, please use a previous version of this plugin.`);
   console.log(chalk.blue(`[11ty/eleventy-upgrade-help] ---`));
 
+  eleventyConfig.addPlugin(require("./src/meta-generator.js"));
+
   // Full list of issues: https://github.com/11ty/eleventy/issues?q=milestone%3A%22Eleventy+3.0.0%22+is%3Aclosed+label%3Abreaking-change
   eleventyConfig.addPlugin(require("./src/node-version.js"));
   eleventyConfig.addPlugin(require("./src/explicit-config-file.js"));

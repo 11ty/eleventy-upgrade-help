@@ -33,6 +33,7 @@
     "fast-glob": "^3.3.2",
     "kleur": "^4.1.5",
     "minimist": "^1.2.8",
+    "posthtml-match-helper": "^2.0.2",
     "semver": "^7.6.3"
   },
   "11ty": {
