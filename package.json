@@ -6,9 +6,6 @@
     "access": "public"
   },
   "main": ".eleventy.js",
-  "scripts": {
-    "test": ""
-  },
   "license": "MIT",
   "engines": {
     "node": ">=18"
@@ -33,11 +30,11 @@
   "bugs": "https://github.com/11ty/eleventy-upgrade-help/issues",
   "homepage": "https://www.11ty.dev/",
   "dependencies": {
-    "fast-glob": "^3.3.2",
+    "fast-glob": "^3.3.3",
     "kleur": "^4.1.5",
     "minimist": "^1.2.8",
-    "posthtml-match-helper": "^2.0.2",
-    "semver": "^7.6.3"
+    "posthtml-match-helper": "^2.0.3",
+    "semver": "^7.7.3"
   },
   "11ty": {
     "compatibility": ">=3 <4"
